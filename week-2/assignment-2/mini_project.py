@@ -24,3 +24,4 @@ output_temp: float = fahrenheit_to_celsius(input_temp)
 # Round to exactly one decimal place
 print(f"{input_temp:.1f}°F is {output_temp:.1f}°C.")
 
+# Woops. I missed the part about branching BEFORE doing the work!
