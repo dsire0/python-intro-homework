@@ -1,0 +1,16 @@
+<et_tu_terminal>
+1. A powerful multi-tool
+2. Can do more than explorer.exe
+* git add
+* git commit
+* git push 
+</et_tu_terminal>
+
+<greedy_python>
+Python.exe is called to run the script specified or directly execute commands written in the terminal
+</greedy_python>
+
+<gitbane>
+Git is the CLI interface to GitHub
+Git allows for easy version control right from the terminal, though the documentation for the commands are like needles in the eyes.
+</gitbane>
