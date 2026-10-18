@@ -22,11 +22,12 @@ t1, t2, t3 = "pre-dawn", "dawn", "morning"
 d= day = input("What day is it? monday, tuesday, wednesday: ").lower() # monday, tuesday, wednesday
 if d not in [d1, d2, d3]:
     print("Invalid input, try monday, tuesday, or wednesday")
+    exit()
 
 t= time = input("What time of day? pre-dawn, dawn, morning: ").lower() # pre-dawn, dawn, morning
 if t not in [t1, t2, t3]:
     print("Invalid input, try pre-dawn, dawn, or morning")
-
+    exit()
 
 if d == d1 and t == t1:
     print("Suggestion: Pre-dawn rituals are the best, try making a new one!")
