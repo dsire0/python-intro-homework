@@ -16,30 +16,35 @@
 # What time of day? morning
 # Sorry, I don't recognize that day. Try: Monday, Tuesday, Wednesday...
 
-d= day = input("What day is it?: ").lower() # monday, tuesday, wednesday
-t= time = input("What time of day?: ").lower() # pre-dawn, dawn, morning
-
 d1, d2, d3 = "monday", "tuesday", "wednesday"
 t1, t2, t3 = "pre-dawn", "dawn", "morning"
 
+d= day = input("What day is it? monday, tuesday, wednesday: ").lower() # monday, tuesday, wednesday
+if d not in [d1, d2, d3]:
+    print("Invalid input, try monday, tuesday, or wednesday")
+
+t= time = input("What time of day? pre-dawn, dawn, morning: ").lower() # pre-dawn, dawn, morning
+if t not in [t1, t2, t3]:
+    print("Invalid input, try pre-dawn, dawn, or morning")
+
 
 if d == d1 and t == t1:
-    print()
+    print("Suggestion: Pre-dawn rituals are the best, try making a new one!")
 elif d == d2 and t == t1:
-    print()
+    print("Suggestion: Take some time to yourself, you deserve it.")
 elif d == d3 and t == t1:
-    print()
+    print("Suggestion: Try getting up at 3:00 AM.")
 elif d == d1 and t == t2:
-    print()
+    print("Suggestion: Dawn has arrived! keep working hard!")
 elif d == d2 and t == t2:
-    print()
+    print("Suggestion: Why not. Take a little extra time to yourself.")
 elif d == d3 and t == t2:
-    print()
+    print("Suggestion: Yesterday is yesterday; don't worry and be happy!")
 elif d == d1 and t == t3:
-    print()
+    print("Suggestion: Hell yeah, perfect time to catch a nap")
 elif d == d2 and t == t3:
-    print()
+    print("Suggestion: Keep your code simple")
 elif d == d3 and t == t3:
-    print()
+    print("Suggestion: Try a new way to handle an old problem")
 else:
-    print()
+    print("And how did we get here?")
