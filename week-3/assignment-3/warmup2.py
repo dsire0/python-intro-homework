@@ -1,7 +1,7 @@
 # Warmup 2: Age Categories
 # Use input() to ask the user for their age. Convert it to an integer, then use if/elif/else with and to check ranges and print which category they fall into:
 
-def dbg(input=any) -> None:
+def dbg(input: str) -> None:
     """Prepends input with 'DEBUG: ' """
     print(f"DEBUG: {input!s}")
 
