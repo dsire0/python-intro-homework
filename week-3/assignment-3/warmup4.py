@@ -11,7 +11,7 @@
 # 0 is even.
 
 # Convert's user input to an int
-num: int  = int(input("provide a number"))
+num: int  = int(input("provide a number: "))
 
 # Determine the Sign
 if num > 0:
