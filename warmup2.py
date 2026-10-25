@@ -23,6 +23,7 @@ original: dict[str, str | list[str]] = {"animal": "cat", "toys": ["ball"]}
 print(original)
 copied: dict[str, str | list[str]] = original.copy()
 print(copied)
+# The real question is: How do you work with the nested list?
 
 # oy vey!
 # /scratchpad
