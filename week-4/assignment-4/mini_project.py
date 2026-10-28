@@ -15,12 +15,16 @@ print("Top scorer: ")
 adding: float = 0
 average: float = 0
 subject_set: set[str] = set()
+highscore_list: list[str] = []
 for tionary in students:
     for key, value in tionary.items():
         # print(type(key))
         # print(type(value))
         if key == "score":
             adding += float(value)
+            if int(value) > 75:
+                highscore_list.append
+
         if key == "subject":
             subject_set.add(str(value))
 
