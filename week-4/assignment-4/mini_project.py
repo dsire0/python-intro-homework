@@ -14,16 +14,21 @@ print("Top scorer: ")
 
 adding: float = 0
 average: float = 0
+subject_set: set[str] = set()
 for tionary in students:
     for key, value in tionary.items():
         # print(type(key))
         # print(type(value))
         if key == "score":
-            value = float(value)
-            adding += value
+            adding += float(value)
+        if key == "subject":
+            subject_set.add(str(value))
+
+
 average = adding / len(students)
 print(f"Class average: {average}")
 
+print(f"Subjects offered: {subject_set}")
 
-print("Subjects offered: ")
+
 print("High scorers:")
