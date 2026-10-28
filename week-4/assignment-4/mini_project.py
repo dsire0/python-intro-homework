@@ -36,7 +36,7 @@ for student in students:
         top_score = score
         top_student = name
 
-    # 2. Accumulate total score for class average
+    # 2.1 Accumulate total score for class average
     #    for each 'row' (dictionary), the score 'column' is added to the total_score
     total_score += score
 
@@ -51,7 +51,8 @@ for student in students:
     if score > 75:
         high_scorers.append(name)
 
-class_average: float = total_score / len(students)
+# 2.2 Average is determined outside of the above 'for loop' so the average is not calculated at every interation of the loop.
+class_average: float = total_score / len(students) # 'len' is used on the 'students' list as each dict counts as an item.
 
 print(f"Top scorer:       {top_student} ({top_score})")
 print(f"Class average:    {class_average}")
