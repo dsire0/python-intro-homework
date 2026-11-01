@@ -1,3 +1,22 @@
+
+student: dict = {
+    "name" : "Named",
+    "grade": "Hard-boiled",
+    "subjects": ["More Dakka", "Got Dakka?, WAAAGH and you"]
+}
+
+
+def printer() -> None:
+    print("")
+    """I didn't want to type this out twice."""
+    for key, value in student.items():
+        print(f"{key}: {value}")
+
+
+printer()
+student.setdefault("graduated", False)
+printer()
+
 # scratchpad
 
 pad: dict[str, str] = {"scritch" : "light", "scratch" : "normal", "scrunch" : "heavy"}
@@ -30,23 +49,3 @@ print(copied)
 
 # oy vey!
 # /scratchpad
-
-student: dict = {
-    "name" : "Named",
-    "grade": "Hard-boiled",
-    "score": "More Dakka"
-}
-
-
-def printer() -> None:
-    print("")
-    """I didn't want to type this out twice."""
-    for key, value in student.items():
-        print(f"{key}: {value}")
-
-
-printer()
-student.setdefault("graduated", False)
-printer()
-
-
