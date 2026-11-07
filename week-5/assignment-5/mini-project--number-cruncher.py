@@ -16,7 +16,10 @@
 # Quit — print a goodbye message and exit the loop.
 # The menu should redisplay after each operation until the user chooses Quit.
 
-# Bubble sort hint: One pass through the list looks at pairs — numbers[i] and numbers[i+1] — and swaps them if the first is larger. You need to repeat this process until a full pass produces zero swaps.
+# Bubble sort hint: One pass through the list looks at pairs — numbers[i] and numbers[i+1] 
+# — and swaps them if the first is larger. 
+# You need to repeat this process until a full pass produces zero swaps.
+
 # Pseudocode:
 
 # repeat:
@@ -28,7 +31,62 @@
 # until swapped is False
 # Save as: mini_project.py
 
-loop: bool = True
+
+def router(input:int):
+    if   input == 1:
+        return findmin()
+    elif input == 2:
+        return findmax()
+    elif input == 3:
+        return search()
+    elif input == 4:
+        return bubblesort()
+    elif input == 5:
+        return quit()
+    else:
+        pass
+
+# Working in order - findmin, findmax, search, bubblesort.
+
+# Compare list values against eachother, assignment only occurs if trialvalue < currentvalue
+def findmin()     -> bool:
+    currentvalue: int = 0
+    trialvalue: int = 0
+
+    # comparison
+    currentvalue = trialvalue if trialvalue < currentvalue else currentvalue
+    print() # TBI Response
+    return True
+
+
+def findmax()    -> bool:
+    # TBI code
+    print() # TBI Response
+    return True
+
+
+def search()     -> bool:
+    # TBI code
+    print() # TBI Response
+    return True
+
+
+def bubblesort() -> bool:
+    # TBI code
+    print() # TBI Response
+    return True
+
+
+def quit()       -> bool:
+    print("Goodbye")
+    return False
+
+# List of ints
+numbers: list[int] = [42, 17, 83, 5, 61, 29, 74, 8, 55, 93, 31, 66, 14, 47, 78, 3, 59, 22, 86, 40]
+
+
+loop: bool = True # primary loop condition
+
 print("\n" * 20)
 # primary loop in
 while loop:
@@ -44,14 +102,21 @@ while loop:
 
     # Repeats the question if choice is not valid
     choice = 0
+
     # second loop in
     print("══════ second loop in  ══════")
+    # once loop exits, choice will have been validated and allow the next step of code to run
     while choice not in range(1,6):
         choice = int(input("Choose an option (1-5): ").strip())
         if choice not in range(1,6):
             print(f"\nSelection: {choice} is not valid.\n")
         else: 
             print(f"\nProceeding with selection {choice}.\n")
+
+    # Decides if the loop with continue
+    loop = router(choice) # Returns bool
+
+    # second loop out
     print("══════ second loop out ══════")
 
     # primary loop out
