@@ -14,7 +14,6 @@
 # hardcoded names in a list
 names: list = ["bip","bop","boop"]
 cap:    int = len(names)
-index:  int = 0
 match: bool = False
 
 # Look again when name is not found
@@ -35,7 +34,6 @@ while not match: # Will loop as long as match == false
 
         # Test for parity
         if miner == minecart :
-            # 
             match = True
             print(f"Found \"{minecart}\" at index {mineshaft}")
             break
