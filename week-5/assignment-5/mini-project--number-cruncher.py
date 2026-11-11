@@ -32,8 +32,15 @@
 # until swapped is False
 # Save as: mini_project.py
 #endregion assignment
+#region imports
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 from importables import spelunking as sp
+
+#endregion imports
 
 
 #region functions
@@ -78,7 +85,7 @@ def findmax()    -> bool: # 2
 
 def search()     -> bool: # 3
     searchterm: int = sp.intput()
-    sp.int_miner(searchterm, numbers)
+    sp.int_miner(searchterm, numbers[0:])
     print() # TBI Response
     return True
 
