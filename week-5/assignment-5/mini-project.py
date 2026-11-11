@@ -106,11 +106,11 @@ numbers: list[int] = [42, 17, 83, 5, 61, 29, 74, 8, 55, 93, 31, 66, 14, 47, 78, 
 loop: bool = True
 #endregion global variables
 
-print("\n" * 20)
+print("\n" * 5)
 #region primary loop
 while loop:
     # Prints again AFTER a SUCCESSFUL operation
-    print("════════════ primary loop in  ════════════")
+    # print("════════════ primary loop in  ════════════")
     print("\n" \
     "═════ Number Cruncher ═════\n" \
     "1. Find min\n" \
@@ -123,22 +123,22 @@ while loop:
     choice = 0
 
     #region second loop
-    print("══════ second loop in  ══════")
+    # print("══════ second loop in  ══════")
     # once loop exits, choice will have been validated and allow the next step of code to run
     while choice not in range(1,6):
         try:
             choice = int(input("Choose an option (1-5): ").strip())
         except TypeError:
             print(f"\nSelection: {choice} is not valid.\n")
-        else: 
-            print(f"\nProceeding with selection {choice}.\n")
+        # else: 
+            # print(f"\nProceeding with selection {choice}.\n")
 
     # Decides if the loop will continue
     loop = router(choice) # Returns bool
 
     #endregion second loop
-    print("══════ second loop out ══════")
+    # print("══════ second loop out ══════")
 
     #endregion primary loop
-    print("════════════ primary loop out ════════════" + "\n" * 20)
+    # print("════════════ primary loop out ════════════" + "\n" * 20)
     
