@@ -86,13 +86,11 @@ def findmax()    -> bool: # 2
 def search()     -> bool: # 3
     searchterm: int = sp.intput()
     sp.int_miner(searchterm, numbers[0:])
-    print() # TBI Response
     return True
 
 
 def bubblesort() -> bool: # 4
-    # TBI code
-    print() # TBI Response
+    print(sp.bubbler(numbers))
     return True
 
 

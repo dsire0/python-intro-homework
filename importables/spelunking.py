@@ -54,3 +54,18 @@ def intput() -> int:
             return num
         except ValueError:
             print(f"{intput} is not an integer. Try again.")
+
+# Integers only
+def bubbler(bubbles:list[int]) -> list[int]:
+    swapplepop: bool = True
+    while swapplepop:
+        swapplepop: bool = False
+        for i in range(len(bubbles) - 1):
+            left: int = bubbles[i]
+            right: int = bubbles[i+1]
+            if left > right:
+                bubbles[i] = right
+                bubbles[i+1] = left
+                swapplepop = True
+    return bubbles
+    
