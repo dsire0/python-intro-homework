@@ -86,4 +86,32 @@ def bubbler(bubbles:list[int]) -> list[int]:
                 bubbles[i+1] = left
                 swapplepop = True
     return bubbles
-    
+
+
+# Compare list values against eachother, assignment only occurs if trialvalue < currentvalue
+def findmin(numbers) -> bool:  # 1
+    currentvalue: int = numbers[0]
+    trialvalue: int = 0
+    for trialvalue in numbers:
+        # comparison
+        print(
+            f"trialva1lue < currentvalue : {trialvalue} < {currentvalue} : {trialvalue < currentvalue}"
+        )
+        currentvalue = trialvalue if trialvalue < currentvalue else currentvalue
+
+    print(f"The minimum value is {currentvalue}")
+    return True
+
+
+def findmax(numbers) -> bool:  # 2
+    currentvalue: int = numbers[0]
+    trialvalue: int = 0
+    for trialvalue in numbers:
+        # comparison
+        print(
+            f"trialva1lue > currentvalue : {trialvalue} > {currentvalue} : {trialvalue > currentvalue}"
+        )
+        currentvalue = trialvalue if trialvalue > currentvalue else currentvalue
+
+    print(f"The maximum value is {currentvalue}")
+    return True
