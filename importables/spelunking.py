@@ -115,3 +115,9 @@ def findmax(numbers) -> bool:  # 2
 
     print(f"The maximum value is {currentvalue}")
     return True
+
+
+def search(numbers: list[int]) -> bool:  # 3
+    searchterm: int = intput()
+    int_miner(searchterm, numbers[0:])
+    return True
