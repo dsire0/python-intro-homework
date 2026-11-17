@@ -38,6 +38,24 @@ def int_miner(spelunking:int, cavelist:list) -> None:
             return
 
 
+def is_valid_int(ghosttext: str = "Enter an integer: ") -> int:
+    """Variant of intput: Loops asking for input - checks if valid - returns the int if it passes.
+
+        Two steps condensed into one try:except block with optional customized greeting.
+    Args:
+        ghosttext (str, optional): Allows the greeting to be customized. Defaults to "Enter an integer".
+
+    Returns:
+        int: a valid int unmodified
+    """
+    while True:
+        intput: str = input(f"{ghosttext}")
+        try:
+            num = int(intput)
+            return num
+        except ValueError:
+            print(f"{intput} is not an integer. Try again.")
+
 
 def intput() -> int:
     """ Loops asking for input - checks if valid - returns the int if it passes.
