@@ -89,7 +89,7 @@ def bubbler(bubbles: list[int]) -> list[int]:
 
 
 # Compare list values against eachother, assignment only occurs if trialvalue < currentvalue
-def findmin(numbers) -> bool:  # 1
+def findmin(numbers: list[int]) -> bool:  # 1
     currentvalue: int = numbers[0]
     trialvalue: int = 0
     for trialvalue in numbers:
@@ -103,7 +103,7 @@ def findmin(numbers) -> bool:  # 1
     return True
 
 
-def findmax(numbers) -> bool:  # 2
+def findmax(numbers: list[int]) -> bool:  # 2
     currentvalue: int = numbers[0]
     trialvalue: int = 0
     for trialvalue in numbers:
