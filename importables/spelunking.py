@@ -37,6 +37,31 @@ def int_miner(spelunking: int, cavelist: list) -> None:
             return
 
 
+def searchit(
+    numbers: list[int], target: int | None = None, printit: bool = True
+) -> None | int:
+    searchterm: int = intput() if target is None else target
+    searchresult: None | int = int_miner(numbers[0:], searchterm, printit)
+    return searchresult
+
+
+def intput() -> int:
+    """Loops asking for input - checks if valid - returns the int if it passes.
+
+    Two steps condensed into one try:except block
+
+    Returns:
+        int: a valid int unmodified
+    """
+    while True:
+        intput: str = input("Enter an integer: ")
+        try:
+            num = int(intput)
+            return num
+        except ValueError:
+            print(f"{intput} is not an integer. Try again.")
+
+
 def is_valid_int(ghosttext: str = "Enter an integer: ") -> int:
     """Variant of intput: Loops asking for input - checks if valid - returns the int if it passes.
 
