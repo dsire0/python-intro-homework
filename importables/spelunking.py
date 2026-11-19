@@ -10,7 +10,7 @@ def int_miner(spelunking: int, cavelist: list) -> None:
     mineshaft: int = 0
     minecart: int = 0
 
-    # Look again when name is not found
+    # Look again when number is not found
     while not match:  # Will loop as long as match == false
         miner: int = spelunking  # miner accepts the task
 
@@ -24,14 +24,17 @@ def int_miner(spelunking: int, cavelist: list) -> None:
             # endregion Debug
 
             # Test for parity
-            if miner == minecart:
+            if miner == minecart and printit:
                 match = True
                 print(f'Found "{minecart}" at index {mineshaft}')
                 return
+            elif miner == minecart and not printit:
+                match = True
+                return mineshaft
 
             mineshaft += 1
 
-        if not match:
+        if not match and printit:
             print(f'Sadly, "{miner}" could not be found')
             match = True  # Ehhh
             return
