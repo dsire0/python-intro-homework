@@ -38,6 +38,8 @@ def int_miner(spelunking: int, cavelist: list) -> None:
             print(f'Sadly, "{miner}" could not be found')
             match = True  # Ehhh
             return
+        elif not match and not printit:
+            return -1
 
 
 def searchit(
