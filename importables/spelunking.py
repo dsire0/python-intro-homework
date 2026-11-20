@@ -1,9 +1,9 @@
-def int_miner(spelunking: int, cavelist: list) -> None:
+def int_miner(cavelist: list, spelunking: int, printit: bool = True) -> None | int:
     """Search through a list and return an int.
 
     Args:
-        spelunking (int): The integer to search for.
         cavelist (list): The list to search through
+        spelunking (int): The integer to search for.
     """
     cap: int = len(cavelist) - 1
     match: bool = False
@@ -86,23 +86,6 @@ def is_valid_int(ghosttext: str = "Enter an integer: ") -> int:
             print(f"{intput} is not an integer. Try again.")
 
 
-def intput() -> int:
-    """Loops asking for input - checks if valid - returns the int if it passes.
-
-    Two steps condensed into one try:except block
-
-    Returns:
-        int: a valid int unmodified
-    """
-    while True:
-        intput: str = input("Enter an integer: ")
-        try:
-            num = int(intput)
-            return num
-        except ValueError:
-            print(f"{intput} is not an integer. Try again.")
-
-
 # Integers only
 def bubbler(bubbles: list[int]) -> list[int]:
     swapplepop: bool = True
@@ -119,7 +102,15 @@ def bubbler(bubbles: list[int]) -> list[int]:
 
 
 # Compare list values against eachother, assignment only occurs if trialvalue < currentvalue
-def findmin(numbers: list[int]) -> bool:  # 1
+def findmin(numbers: list[int]) -> bool:
+    """_summary_
+
+    Args:
+        numbers (list[int]): _description_
+
+    Returns:
+        bool: _description_
+    """
     currentvalue: int = numbers[0]
     trialvalue: int = 0
     for trialvalue in numbers:
@@ -133,7 +124,7 @@ def findmin(numbers: list[int]) -> bool:  # 1
     return True
 
 
-def findmax(numbers: list[int]) -> bool:  # 2
+def findmax(numbers: list[int]) -> bool:
     currentvalue: int = numbers[0]
     trialvalue: int = 0
     for trialvalue in numbers:
@@ -147,7 +138,29 @@ def findmax(numbers: list[int]) -> bool:  # 2
     return True
 
 
-def search(numbers: list[int]) -> bool:  # 3
-    searchterm: int = intput()
-    int_miner(searchterm, numbers[0:])
-    return True
+def returnmin(numbers: list[int]) -> int:
+    currentvalue: int = numbers[0]
+    trialvalue: int = 0
+    for trialvalue in numbers:
+        # comparison
+        # print(
+        #     f"trialva1lue < currentvalue : {trialvalue} < {currentvalue} : {trialvalue < currentvalue}"
+        # )
+        currentvalue = trialvalue if trialvalue < currentvalue else currentvalue
+
+    # print(f"The minimum value is {currentvalue}")
+    return currentvalue
+
+
+def returnmax(numbers: list[int]) -> int:
+    currentvalue: int = numbers[0]
+    trialvalue: int = 0
+    for trialvalue in numbers:
+        # comparison
+        # print(
+        #     f"trialva1lue > currentvalue : {trialvalue} > {currentvalue} : {trialvalue > currentvalue}"
+        # )
+        currentvalue = trialvalue if trialvalue > currentvalue else currentvalue
+
+    # print(f"The maximum value is {currentvalue}")
+    return currentvalue
