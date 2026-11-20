@@ -1,0 +1,16 @@
+[project]
+name = "python-intro-homework"
+version = "0.1.0"
+authors = [
+    { name = "thegingeroriginator", email = "79474136+dsire0@users.noreply.github.com" },
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[build-system]
+requires = ["uv_build>=0.11.32,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "importables"
+module-root = ""
