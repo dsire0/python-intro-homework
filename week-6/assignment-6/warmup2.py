@@ -13,26 +13,17 @@
 # Save as: warmup2.py
 
 
-def celsius_to_fahrenheit(c: float) -> str:
-    c_to_f: float = (c * 9 / 5) + 32
-    cof: str = f"{c}°C = {c_to_f:.1f}°F"
-    return cof
+def celsius_to_fahrenheit(c: float) -> float:
+    return (c * 9 / 5) + 32
 
 
-def fahrenheit_to_celsius(f: float) -> str:
-    f_to_c: float = (f - 32) * 5 / 9
-    foc: str = f"{f}°F = {f_to_c:.1f}°C"
-    return foc
+def fahrenheit_to_celsius(f: float) -> float:
+    return (f - 32) * 5 / 9
 
 
 if __name__ == "__main__":
-    print(
-        celsius_to_fahrenheit(100),
-        "\n",
-        celsius_to_fahrenheit(-100),
-        "\n",
-        fahrenheit_to_celsius(100),
-        "\n",
-        fahrenheit_to_celsius(-100),
-        sep="",
-    )
+    for c in (0, 100, -100):
+        print(f"{c:.1f}°C = {celsius_to_fahrenheit(c):.1f}°F")
+
+    for f in (72, 100, -100):
+        print(f"{f:.1f}°F = {fahrenheit_to_celsius(f):.1f}°C")
