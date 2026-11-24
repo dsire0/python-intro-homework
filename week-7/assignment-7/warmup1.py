@@ -7,6 +7,7 @@ example: str = "./week-7/assignment-7/readmewriteme.txt"
 example_csv: str = "./week-7/assignment-7/readmewriteme.csv"
 
 
+# region practice
 def open_read_example() -> None:
     with open(example, "r") as file:
         content: str = file.read()
@@ -115,6 +116,8 @@ def open_csv_dictwriter_example() -> (
         writer.writerows(rows)
 
 
+# endregion practice
+# region warmup
 def open_data_notes() -> None:
     with open("./week-7/data/notes.txt", "r") as file:
         lines: list[str] = file.readlines()  # Returns a list — one string per line.
@@ -156,6 +159,8 @@ def main() -> None:
     # warmup1
     open_data_notes()
 
+
+# endregion main
 
 if __name__ == "__main__":
     main()

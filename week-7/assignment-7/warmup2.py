@@ -20,7 +20,7 @@ def open_csv_by_dictreader_example() -> None:
             print(row["product"], row["price"])  # access by name
 
 
-# regionend Reader vs DictReader
+# endregion Reader vs DictReader
 
 
 # region Rows into List
@@ -42,7 +42,7 @@ def open_csv_rows_to_list_by_list_example() -> None:
         print(f"    {item['product']}: ${item['price']}")
 
 
-# regionend Rows into List
+# endregion Rows into List
 
 
 # region Mini Pipeline
@@ -66,7 +66,9 @@ def mini_pipeline() -> None:
         float(item["price"]) * int(item["quantity"]) for item in office_items
     )
     print(f"Office inventory value: ${total_value:.2f}")
-    # regionend Mini Pipeline
+
+
+# endregion Mini Pipeline
 
 
 # region warmup2
@@ -77,7 +79,7 @@ def read_a_csv_with_dictreader() -> None:
             print(f"{row['name']}: {row['score']}")
 
 
-# regionend warmup2
+# endregion warmup2
 # region main
 
 
@@ -96,4 +98,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-# regionend main
+# endregion main
