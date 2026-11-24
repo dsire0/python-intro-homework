@@ -1,3 +1,4 @@
-Name,Age,City
-Jazmine,30,New York
-Luis,35,Chicago
+product,category,price,quantity
+Notebook,Stationery,4.99,150
+Pen,Stationery,1.49,500
+Stapler,Office,12.99,75
