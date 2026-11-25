@@ -72,11 +72,12 @@ def convert(raw_rows: list[dict[str, str | float]]) -> list[dict[str, str | floa
 
 # 'typed_rows' to 'filtered_rows'
 # Filter the list to only rows where category is "Food".
-def food_filter(raw_rows: list[dict[str, str | float]]) -> list[dict[str, str | float]]:
+def food_filter(category: list[dict[str, str | float]]) -> list[dict[str, str | float]]:
     # At this point, I have a whole spreadsheet with the amount column values typed as float
     # Imagine the parameter being named "category" as well.
+    # Aw hell... I have to.
     filtered_food: list[dict[str, str | float]] = [
-        category for category in raw_rows if category["category"] == "category"
+        category for category in category if category["category"] == "category"
     ]
     return filtered_food
 
