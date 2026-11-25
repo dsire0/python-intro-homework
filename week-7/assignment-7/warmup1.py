@@ -42,8 +42,10 @@ def open_error_example() -> None:
 
 
 def open_write_example() -> None:  # overwrites
-    with open(example, "w") as file:
-        file.write("hello")
+    with open(file=example, mode="w") as file:
+        _ = file.write(
+            "hello"
+        )  # Apparently returns an int based on the number of characters
         print(
             f" The content: 'hello' was written to {example}, replacing all contents : write_example"
         )
@@ -55,7 +57,9 @@ def open_write_example() -> None:  # overwrites
 def overwrite(content: str) -> None:
     with open(example, "w+") as file:
         content = content.strip()
-        file.write(content)
+        _ = file.write(
+            content
+        )  # Apparently returns an int based on the number of characters
         newcontent: str = file.read().strip()
         print(
             f" The content: '{content}' was written to {example}, replacing all contents : overwrite"
@@ -113,13 +117,13 @@ def open_csv_dictwriter_example() -> (
     with open(example_csv, "w", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=["Name", "Age", "City"])
         writer.writeheader()
-        writer.writerows(rows)
+        writer.writerows(rowdicts=rows)
 
 
 # endregion practice
 # region warmup
 def open_data_notes() -> None:
-    with open("./week-7/data/notes.txt", "r") as file:
+    with open(file="./week-7/data/notes.txt", mode="r") as file:
         lines: list[str] = file.readlines()  # Returns a list — one string per line.
         line_num: int = 1
         for line in lines:
@@ -128,7 +132,7 @@ def open_data_notes() -> None:
 
 
 def open_data_notes_line_by_line() -> None:
-    with open("./week-7/data/notes.txt", "r") as file:
+    with open(file="./week-7/data/notes.txt", mode="r") as file:
         for line_num, line in enumerate(file, start=1):
             print(f"Line {line_num}: {line.strip()}")
 
@@ -157,7 +161,7 @@ def main() -> None:
     # endregion .CSV
 
     # warmup1
-    open_data_notes()
+    open_data_notes_line_by_line()
 
 
 # endregion main
